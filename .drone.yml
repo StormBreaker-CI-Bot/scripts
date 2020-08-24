@@ -1,0 +1,14 @@
+kind: pipeline
+type: docker
+name: StormPipeline
+
+steps:
+- name: HQ
+  image: starlight2834/ci_docker:latest
+  environment:
+    BOT_API_KEY:
+      from_secret: BOT_API_KEY
+    CHAT_ID:
+      from_secret: CHAT_ID
+  commands:
+  - "curl https://raw.githubusercontent.com/Prosecuter/scripts/main/build.sh | bash"
