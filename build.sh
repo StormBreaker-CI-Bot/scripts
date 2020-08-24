@@ -75,7 +75,7 @@ else
 		export STRIP="${TC_PATH}/clang/aarch64-linux-gnu/bin/strip"
 		export COMPILER="Kdrag0n's Latest Proton Clang"
 	else
-		git clone https://github.com/Unitrix-Kernel/unitrix-clang.git ${TC_PATH}/clang
+		git clone --depth=1 https://github.com/Unitrix-Kernel/unitrix-clang.git ${TC_PATH}/clang
 		export PATH="${TC_PATH}/clang/bin:$PATH"
 		export STRIP="${TC_PATH}/clang/aarch64-linux-gnu/bin/strip"
 		export COMPILER="Starlight's Proton Clang 11"
