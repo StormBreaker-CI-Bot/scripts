@@ -55,7 +55,6 @@ function start_sticker() {
         -d chat_id=$CHANNEL_ID
 }
 
-tg_sendinfo "$(echo -e "Build has been triggered for $DEVICE 🔫")"
 #======================= Telegram End =========================
 #======================== Clone Stuff ==========================
 
@@ -157,6 +156,7 @@ export LOG=$HOME/build/build${REVISION}.txt
 #===================== End of function ========================
 #======================= definition ===========================
 
+tg_sendinfo "$(echo -e "Build has been triggered for $DEVICE 🔫\n>> Cloning $COMPILER")"
 clone_tc
 clone_kernel
 
