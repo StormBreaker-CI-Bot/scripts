@@ -13,6 +13,7 @@ export IS_MIUI="no"
 export KERNEL_DIR="$HOME/kernel"
 export KBUILD_BUILD_USER="StormbreakerCI-BOT"
 export GCC_COMPILE="$GCC" 
+export CLANG_VER="11"
 export KBUILD_BUILD_HOST="Stormbreaker-HQ"
 export REVISION="6"
 
@@ -68,14 +69,20 @@ if [ "$GCC_COMPILE" == "yes" ]; then
 	export STRIP="${TC_PATH}/gcc64/aarch64-elf/bin/strip"
 	export COMPILER="Arter97's Latest GCC Compiler" 
 else
-	git clone --depth=1 https://github.com/kdrag0n/proton-clang.git ${TC_PATH}/clang
-	export PATH="${TC_PATH}/clang/bin:$PATH"
-	export STRIP="${TC_PATH}/clang/aarch64-linux-gnu/bin/strip"
-	export COMPILER="Kdrag0n's Latest Proton Clang"
-
+	if [ "$CLANG_VER" == "12" ]; then
+		git clone --depth=1 https://github.com/kdrag0n/proton-clang.git ${TC_PATH}/clang
+		export PATH="${TC_PATH}/clang/bin:$PATH"
+		export STRIP="${TC_PATH}/clang/aarch64-linux-gnu/bin/strip"
+		export COMPILER="Kdrag0n's Latest Proton Clang"
+	else
+		git clone https://github.com/Unitrix-Kernel/unitrix-clang.git ${TC_PATH}/clang
+		export PATH="${TC_PATH}/clang/bin:$PATH"
+		export STRIP="${TC_PATH}/clang/aarch64-linux-gnu/bin/strip"
+		export COMPILER="Starlight's Proton Clang 11"
+	fi
 fi
 
-rm -rf $ZIP_DIR && git clone https://github.com/Prosecuter/AnyKernel3 -b vince $ZIP_DIR
+rm -rf $ZIP_DIR && git clone https://github.com/Prosecuter/AnyKernel3 $ZIP_DIR
 }
 
 function clone_kernel(){
