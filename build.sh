@@ -151,7 +151,8 @@ tg_pushzip
 
 #========================= Build Log ==========================
 
-export LOG=$HOME/build/build${DRONE_BUILD_NUMBER}.txt
+mkdir -p $HOME/build
+export LOG=$HOME/build/build${REVISION}.txt
 
 #===================== End of function ========================
 #======================= definition ===========================
