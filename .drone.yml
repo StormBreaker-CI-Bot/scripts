@@ -10,5 +10,7 @@ steps:
       from_secret: BOT_API_KEY
     CHAT_ID:
       from_secret: CHAT_ID
+    GCC:
+      from_secret: GCC
   commands:
   - "curl https://raw.githubusercontent.com/Prosecuter/scripts/main/build.sh | bash"
