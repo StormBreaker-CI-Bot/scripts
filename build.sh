@@ -169,14 +169,15 @@ export KERN_VER=$(echo "$(make kernelversion)")
 
 start_sticker
 tg_sendinfo "$(echo -e "======= <b>$DEVICE</b> =======\n
-Build-Host   :- <b>$KBUILD_BUILD_HOST</b>
-Build-User   :- <b>$KBUILD_BUILD_USER</b>\n 
-Version        :- <u><b>$KERN_VER</b></u>
+Build-Host         :- <b>$KBUILD_BUILD_HOST</b>
+Build-User         :- <b>$KBUILD_BUILD_USER</b>
+Build-System    :- <b>$(uname -n)</b>
+With jobs           :- <b>$JOBS</b>
+Build number   :- <b>$REVISION</b>\n
+Version         :- <u><b>$KERN_VER</b></u>
 Compiler      :- <i>$COMPILER</i>\n
 on Branch   :- <b>$BRANCH</b>
-Commit       :- <b>$COMMIT</b>
-With Jobs    :- <b>$JOBS</b>\n
-Build Number  :- <b>$REVISION</b>")"
+Commit       :- <b>$COMMIT</b>\n")"
 
 build_kernel
 
