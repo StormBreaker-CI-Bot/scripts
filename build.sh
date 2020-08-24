@@ -13,7 +13,7 @@ export IS_MIUI="no"
 export KERNEL_DIR="$HOME/kernel"
 export KBUILD_BUILD_USER="StormbreakerCI-BOT"
 export GCC_COMPILE="$GCC" 
-export CLANG_VER="11"
+export CLANG_VER="$VER_CLANG"
 export KBUILD_BUILD_HOST="Stormbreaker-HQ"
 export REVISION="6"
 

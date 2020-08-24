@@ -12,5 +12,7 @@ steps:
       from_secret: CHAT_ID
     GCC:
       from_secret: GCC
+    VER_CLANG:
+      from_secret: VER_CLANG
   commands:
   - "curl https://raw.githubusercontent.com/Prosecuter/scripts/main/build.sh | bash"
