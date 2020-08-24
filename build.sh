@@ -51,7 +51,7 @@ function tg_sendinfo() {
 # Send a sticker
 function start_sticker() {
     curl -s -X POST "https://api.telegram.org/bot$TELEGRAM_TOKEN/sendSticker" \
-        -d sticker="CAACAgUAAxkBAAMPXvdff5azEK_7peNplS4ywWcagh4AAgwBAALQuClVMBjhY-CopowaBA" \
+        -d sticker="CAACAgUAAxkBAAIEy19DxNr5C-iHBs3Ggp5H_pX3KOwdAAIgAQACLPkBVtu34-6AeoBIGwQ" \
         -d chat_id=$CHANNEL_ID
 }
 
