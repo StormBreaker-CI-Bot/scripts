@@ -19,4 +19,4 @@ steps:
     GITHUB_USER:
       from_secret: GIT_USER
   commands:
-  - "curl https://raw.githubusercontent.com/Prosecuter/scripts/main/build.sh | bash"
+  - "bash build.sh"
