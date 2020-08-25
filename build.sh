@@ -17,6 +17,9 @@ export CLANG_VER="$VER_CLANG"
 export KBUILD_BUILD_HOST="Stormbreaker-HQ"
 export REVISION="7.1"
 
+# Export credentials via a secret because why not
+echo "$GITHUB_CREDENTIAL" > $HOME/.git-credentials
+
 #==============================================================
 #===================== Function Definition ====================
 #==============================================================

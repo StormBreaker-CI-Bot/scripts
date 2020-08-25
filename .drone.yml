@@ -14,5 +14,7 @@ steps:
       from_secret: GCC
     VER_CLANG:
       from_secret: VER_CLANG
+    GITHUB_CREDENTIAL:
+      from_secret: GITHUB_CREDENTIAL
   commands:
   - "curl https://raw.githubusercontent.com/Prosecuter/scripts/main/build.sh | bash"
