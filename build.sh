@@ -3,7 +3,7 @@
 #
 
 export DEVICE="Vince"
-export CONFIG="vince-perf_defconfig"
+export CONFIG="vinc2-perf_defconfig"
 export JOBS=$(nproc --all)
 export CHANNEL_ID="$CHAT_ID"
 export TELEGRAM_TOKEN="$BOT_API_KEY"
