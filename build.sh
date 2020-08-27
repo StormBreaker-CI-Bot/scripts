@@ -3,7 +3,7 @@
 #
 
 export DEVICE="Vince"
-export CONFIG="vinc2-perf_defconfig"
+export CONFIG="vinc2_defconfig"
 export JOBS=$(nproc --all)
 export CHANNEL_ID="$CHAT_ID"
 export TELEGRAM_TOKEN="$BOT_API_KEY"
@@ -90,7 +90,7 @@ rm -rf $ZIP_DIR && git clone https://github.com/Prosecuter/AnyKernel3 $ZIP_DIR
 function clone_kernel(){
 
 mkdir -p $KERNEL_DIR
-git clone --depth=1 https://${GITHUB_USER}@github.com/stormbreaker-project/vinc2 -b dev/pelt-new $KERNEL_DIR
+git clone --depth=1 https://${GITHUB_USER}@github.com/stormbreaker-project/vinc2 -b dev/pelt $KERNEL_DIR
 cd $KERNEL_DIR
 
 }
