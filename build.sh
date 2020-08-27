@@ -90,7 +90,7 @@ rm -rf $ZIP_DIR && git clone https://github.com/Prosecuter/AnyKernel3 $ZIP_DIR
 function clone_kernel(){
 
 mkdir -p $KERNEL_DIR
-git clone --depth=1 https://${GITHUB_USER}@github.com/stormbreaker-project/vinc2 -b dev/pelt $KERNEL_DIR
+git clone --depth=1 https://${GITHUB_USER}@github.com/stormbreaker-project/vinc2 -b dev/pelt-new $KERNEL_DIR
 cd $KERNEL_DIR
 
 }
@@ -159,7 +159,7 @@ export LOG=$HOME/build/build${REVISION}.txt
 #===================== End of function ========================
 #======================= definition ===========================
 
-tg_sendinfo "$(echo -e "Build has been triggered for $DEVICE 🔫\n>> Cloning $COMPILER")"
+tg_sendinfo "$(echo -e "Build has been triggered for $DEVICE 🔫\n>> Cloning Compiler & Kranul")"
 clone_tc
 clone_kernel
 
